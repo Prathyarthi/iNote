@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { Schema } = mongoose;
 
 const userSchema = new Schema({
     name: {
@@ -21,4 +22,5 @@ const userSchema = new Schema({
 });
 
 // This is to make model through this Schema  
-module.exports = mongoose.model('user', userSchema);
+userModel = mongoose.model('user', userSchema);
+module.exports = userModel;
