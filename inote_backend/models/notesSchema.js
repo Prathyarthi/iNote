@@ -2,8 +2,9 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const notesSchema = new Schema({
-    user: {
-        
+    user: {  // This is used so that only a particular user can see these notes done by him and no other person can see it
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'user'
     },
     title: {
         type: String,
